@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+    "fyne.io/fyne/v2/app"
+    "fyne.io/fyne/v2/widget"
+)
 
 func main() {
-    var v int
-    fmt.Scanf("%X", &v)
-    fmt.Printf("%[1]d\n%[1]c\n", v)
+    a := app.New()
+    w := a.NewWindow("Hello World")
+
+    w.SetContent(widget.NewLabel("Hello World!"))
+    w.ShowAndRun()
 }
