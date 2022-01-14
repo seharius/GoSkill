@@ -1,14 +1,22 @@
 package main
 
 import (
-    "fyne.io/fyne/v2/app"
-    "fyne.io/fyne/v2/widget"
+    "fmt"
+
+	"fyne.io/fyne/v2/widget"
+	"fyne.io/fyne/v2/app"
 )
 
 func main() {
-    a := app.New()
-    w := a.NewWindow("Hello World")
 
-    w.SetContent(widget.NewLabel("Hello World!"))
+    a := app.New()
+    w := a.NewWindow("mój projekt")
+
+    w.SetContent(widget.NewEntry())
     w.ShowAndRun()
+    Exited()
+}
+
+func Exited(){
+    fmt.Println("Exit")
 }
