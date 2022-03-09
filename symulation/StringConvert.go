@@ -1,0 +1,5 @@
+package symulation
+
+func StringConvert() {
+	
+}
